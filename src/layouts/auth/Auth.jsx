@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import image from "../../assets/auth-banner.png"
+import image from "../../assets/auth-page.png"
 
 export default function Auth() {
   return (
