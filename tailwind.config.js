@@ -11,7 +11,8 @@ export default {
         secondary: "#758888",
         base: "#0C0C0C",
         gray: "#232323"
-      }
+      },
+     
     },
     container: {
       center: true,

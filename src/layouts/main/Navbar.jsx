@@ -44,7 +44,7 @@ export default function Navbar() {
             {!open ? <Menu /> :<X />  }
           </div>
         </div>
-        <ul className={`lg:flex items-center bg-primary lg:bg-transparent gap-10 text-xl absolute lg:static  h-auto  ${open ? "top-0 w-full top-[60px]" : "-top-96"}`}>
+        <ul className={`lg:flex spacey-y-5 items-center bg-primary lg:bg-transparent gap-10 text-xl absolute lg:static  h-auto  ${open ? "top-0 w-full top-[60px]" : "-top-96"}`}>
           {
             menuList.map((item,index)=> <li  className={`${item.path === pathname ? "text-primary font-bold": "text-black"} text-xl hover:text-primary duration-200`}><Link to={item.path}>{item.title}</Link></li>)
           }
