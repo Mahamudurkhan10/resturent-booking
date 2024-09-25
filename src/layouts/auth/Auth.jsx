@@ -1,10 +1,10 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import image from "../../assets/auth-page.png"
+import React from "react";
+import { Outlet } from "react-router-dom";
+import image from "../../assets/auth-page.png";
 
 export default function Auth() {
   return (
-    <div className='grid grid-cols-2 items-center container h-screen border'>
+    <div className="grid grid-cols-2 items-center container h-screen">
       <div>
         <img src={image} alt="" />
       </div>
@@ -12,5 +12,5 @@ export default function Auth() {
         <Outlet />
       </div>
     </div>
-  )
+  );
 }
