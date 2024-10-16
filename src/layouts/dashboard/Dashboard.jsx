@@ -6,7 +6,7 @@ export default function Dashboard() {
   return (
     <div className='grid grid-cols-12 gap-5 p-5'>
         <Sidebar />
-        <div className='col-span-10 bg-indigo-50 rounded'>
+        <div className='col-span-10 bg-indigo-50 p-16 rounded'>
             <Outlet />
         </div>
     </div>

@@ -24,7 +24,7 @@ export default function Foods() {
   };
 
   return (
-    <div className='pt-20 mb-12'>
+    <div className='pt-24 mb-12'>
       <div >
         <div className="p-4 w-1/2 pb-12 mx-auto lg:col-span-2 xl:flex grid grid-cols-4  gap-3 ">
           {["", "Pizza", "Rice", "Kabab", "Rice", "Sushi", "Chicken"].map((place) => (

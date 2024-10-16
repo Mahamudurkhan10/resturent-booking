@@ -46,8 +46,8 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <Link to={'/auth/login'}><button className="btn px-9 bg-primary rounded-xl text-white font-semibold text-lg ">Login</button></Link>
-          <button className="btn px-5 btn-outline rounded-xl font-semibold text-lg">My Profile</button>
+          <Link to={'/auth/login'}><button className="btn px-9 bg-primary rounded-xl hover:btn-warning text-white font-semibold text-lg ">Login</button></Link>
+          <Link to={'/dashboard'} className="btn px-5 btn-outline rounded-xl font-semibold text-lg">My Profile</Link>
         </div>
       </div>
     </div>

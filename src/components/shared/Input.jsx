@@ -10,6 +10,7 @@ export default function Input({ label, type, className, onBlur }) {
       <input
         type={type}
         onBlur={onBlur}
+        required
         className={`${className} border w-full py-2 rounded`}
       />
     </div>
