@@ -4,10 +4,10 @@ import { Link, useLocation } from "react-router-dom"
 export default function Navbar() {
     const {pathname} = useLocation()
     console.log(pathname)
-  const navItems = <div className="flex text-lg gap-7">
-   <Link to={'/home'} className={pathname === '/home'?"text-success font-bold":" font-semibold"}> <li>Home</li></Link>
-   <Link to={'/foods'} className={pathname === '/foods'?"text-success font-semibold":" font-semibold"}> <li>Food</li></Link>
-   <Link to={'/bookaTable'} className={pathname === '/bookaTable'?"text-success font-semibold":" font-semibold"}> <li> Book a Table </li></Link>
+  const navItems = <div className="flex text-lg gap-12">
+   <Link to={'/home'} className={pathname === '/home'?"text-success font-bold":"  hover:text-success font-semibold"}> <li>Home</li></Link>
+   <Link to={'/foods'} className={pathname === '/foods'?"text-success font-bold":" hover:text-success font-semibold"}> <li>Food</li></Link>
+   <Link to={'/bookaTable'} className={pathname === '/bookaTable'?"text-success font-bold":"hover:text-success  font-semibold"}> <li> Book a Table </li></Link>
   
   </div>
   return (
@@ -37,7 +37,7 @@ export default function Navbar() {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl"> <img src="https://i.ibb.co.com/Fz2Ydh0/Group-1.png" alt="" /> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -45,8 +45,9 @@ export default function Navbar() {
 
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end flex gap-5">
+          <Link to={'/auth/login'}><button className="btn px-9 bg-primary rounded-xl text-white font-semibold text-lg ">Login</button></Link>
+          <button className="btn px-5 btn-outline rounded-xl font-semibold text-lg">My Profile</button>
         </div>
       </div>
     </div>

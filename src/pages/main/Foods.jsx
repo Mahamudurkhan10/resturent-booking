@@ -17,8 +17,8 @@ export default function Foods() {
   },[])
 
   return (
-    <div className=''>
-      <div className='flex items-center justify-between gap-14 pt-12 '>
+    <div className='pt-32 mb-12'>
+      <div className='flex items-center justify-between gap-14  '>
         <ExploreHeading /> 
         <div className='border flex items-center w-1/3 p-1 rounded-full'>
                 <input type="text" className='outline-none px-2 w-full py-1 bg-transparent' name="" id="" placeholder='Search Food' />
