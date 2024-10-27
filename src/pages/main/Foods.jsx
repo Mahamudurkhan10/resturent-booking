@@ -5,21 +5,22 @@ import { Search } from 'lucide-react';
 
 export default function Foods() {
   const [foods, setFoods] = useState([])
-  const [selectedPlace, setSelectedPlace] = useState('');
-
+  const [selectedFood, setSelectedFood] = useState('');
+ console.log(selectedFood)
   useEffect(() => {
     const getFoods = async () => {
-      const res = await fetch("./fack.json");
+      const query = selectedFood? `foodCategory=${selectedFood}`:''
+      const res = await fetch(`http://localhost:5000/api/products?${query}`);
       const data = await res.json();
      
-      setFoods(data.foods)
+      setFoods(data.result)
     }
     getFoods();
-  }, [])
+  }, [selectedFood])
    
   const hanldeChange = (e) => {
     e.preventDefault();
-    setSelectedPlace(e.target.value);
+    setSelectedFood(e.target.value);
 
   };
 
@@ -27,12 +28,12 @@ export default function Foods() {
     <div className='pt-24 mb-12'>
       <div >
         <div className="p-4 w-1/2 pb-12 mx-auto lg:col-span-2 xl:flex grid grid-cols-4  gap-3 ">
-          {["", "Pizza", "Rice", "Kabab", "Rice", "Sushi", "Chicken"].map((place) => (
+          {["", "Pizza", "Rice", "Kabab", "Sushi", "Chicken"].map((place) => (
             <button
               key={place}
               onClick={hanldeChange}
               value={place}
-              className={` ${selectedPlace === place ? 'btn btn-warning' : 'btn text-white bg-primary btn-outline'}`}
+              className={` ${selectedFood === place ? 'btn btn-warning' : 'btn text-white bg-primary btn-outline'}`}
             >
               {place || "ALL"}
             </button>

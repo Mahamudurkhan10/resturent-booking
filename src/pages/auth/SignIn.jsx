@@ -4,8 +4,8 @@ import Input from "../../components/shared/Input";
 import { Link, useNavigate } from "react-router-dom";
 
 
-export default function Login() {
-  const navigate = useNavigate()
+export default function SignIn() {
+  const navigate = useNavigate() 
   const handleLogin = (e) => {
     e.preventDefault()
     alert("Login successfully" , );

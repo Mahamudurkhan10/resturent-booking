@@ -8,6 +8,7 @@ export default function Navbar() {
    <Link to={'/home'} className={pathname === '/home'?"text-success font-bold":"  hover:text-success font-semibold"}> <li>Home</li></Link>
    <Link to={'/foods'} className={pathname === '/foods'?"text-success font-bold":" hover:text-success font-semibold"}> <li>Food</li></Link>
    <Link to={'/bookaTable'} className={pathname === '/bookaTable'?"text-success font-bold":"hover:text-success  font-semibold"}> <li> Book a Table </li></Link>
+   <Link to={'/uploadProduct'} className={pathname === '/uplaodProduct'?"text-success font-bold":"hover:text-success  font-semibold"}> <li> UploadProduct </li></Link>
   
   </div>
   return (
@@ -37,7 +38,7 @@ export default function Navbar() {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"> <img src="https://i.ibb.co.com/Fz2Ydh0/Group-1.png" alt="" /> </a>
+          <div className="btn btn-ghost text-xl"> <img src="https://i.ibb.co.com/Fz2Ydh0/Group-1.png" alt="" /> </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

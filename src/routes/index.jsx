@@ -10,13 +10,15 @@ import DashboardHome from "../pages/dashboard/DashboardHome";
 import AddMenu from "../pages/dashboard/AddMenu";
 import Earnings from "../pages/dashboard/Earnings";
 import Auth from "../layouts/auth/Auth";
-import Login from "../pages/auth/login";
+
 import ForgetPassword from "../pages/auth/ForgetPassword";
 import OtpVerify from "../pages/auth/OtpVerify";
 import ResetPassword from "../pages/auth/ResetPassword";
 import SignUp from "../pages/auth/SignUp";
 import NotFound from "../pages/NotFound";
 import BookTable from "../pages/main/BookTable";
+import SignIn from "../pages/auth/SignIn";
+import UploadProduct from "../components/ui/Home/uploadProduct";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/bookaTable",
                 element: <BookTable/>
+            },
+            {
+                path: "/uploadProduct",
+                element: <UploadProduct/>
             },
             {
                 path: "/terms-and-conditions",
@@ -71,13 +77,10 @@ const router = createBrowserRouter([
         path: "/auth",
         element: <Auth />,
         children: [
-            {
-                path: "/auth",
-                element: <Login />
-            },
+          
             {
                 path: "login",
-                element: <Login />
+                element: <SignIn></SignIn>
             },
             {
                 path: "sign-up",
