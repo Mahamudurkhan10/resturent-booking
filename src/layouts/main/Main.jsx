@@ -6,7 +6,10 @@ import { Outlet } from 'react-router-dom'
 export default function Main() {
   return (
     <div>
+      <div>
         <Navbar />
+      </div>
+        
         <div className='min-h-screen container'>
             <Outlet />
         </div>
